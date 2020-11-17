@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const parallaxStyle = {
   parallax: {
     height: "90vh",

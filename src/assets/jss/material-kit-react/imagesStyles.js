@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const imagesStyles = {
   imgFluid: {
     maxWidth: "100%",

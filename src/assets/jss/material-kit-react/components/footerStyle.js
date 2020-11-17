@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { container, primaryColor } from "assets/jss/material-kit-react.js";
 
 const footerStyle = {

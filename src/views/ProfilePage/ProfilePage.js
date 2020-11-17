@@ -34,50 +34,42 @@ import surf from "assets/img/surf.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
-import pdf from '../../assets/files/CV.pdf';
+import pdf from '../../assets/files/Gonzalo_Hernandez_CV.pdf';
 
 const useStyles = makeStyles(styles);
 
-const instagramLink = 'https://www.instagram.com/masato.raw/';
-const githubLink = 'https://github.com/GHernandez2410';
-
-const portfolioData = [
-  {
-    name: 'This Webpage',
-    link: 'https://github.com/GHernandez2410/MyProfile',
-    stack: 'ReactJs + Material UI + Firebase Hosting'
-  },
-  {
-    name: 'ÜPics',
-    link: 'https://github.com/GHernandez2410/Upics',
-    stack: 'ReactJs + GoogleApi + Semantic UI'
-  },
-  {
-    name: 'FakeYoutube',
-    link: 'https://github.com/GHernandez2410/MyYoutube',
-    stack: 'ReactJs + YoutubeApi + GoogleApi + Semantic UI'
-  },
-];
-
-const frontEndData = ['React','Typescript','Javascript', 'Npm/Yarn', 'Redux', 'HTML', 'CSS', 'Semantic UI/Material UI/Antdesign'];
-const backEndData = ['NodeJs', 'ExpressJs','Rest Web Services', 'Microservices','Docker', 'Insomnia/Postgres'];
-const dataBaseData = ['PostgreSql', 'Firebase'];
-const organizationData = ['Agile','Scrum', 'Jira', 'Git'];
-
-function generate(list) {
-  return list.map((value) =>
-    <ListItem>
-      <ListItemIcon>
-        <FiberManualRecordIcon />
-      </ListItemIcon>
-      <ListItemText
-        primary={value}
-      />
-    </ListItem>
-  );
-}
-
 export default function ProfilePage(props) {
+  const instagramLink = 'https://www.instagram.com/masato.raw/';
+  const githubLink = 'https://github.com/GHernandez2410';
+
+  const portfolioData = [
+    {
+      name: 'This Webpage',
+      link: 'https://github.com/GHernandez2410/MyProfile2.0',
+      stack: 'ReactJs + Material UI + Firebase Hosting',
+    },
+    {
+      name: 'My Profile',
+      link: 'https://github.com/GHernandez2410/MyProfile',
+      stack: 'ReactJs + Redux + GoogleApi + Semantic UI',
+    },
+    {
+      name: 'ÜPics',
+      link: 'https://github.com/GHernandez2410/Upics',
+      stack: 'ReactJs + GoogleApi + Semantic UI',
+    },
+    {
+      name: 'FakeYoutube',
+      link: 'https://github.com/GHernandez2410/MyYoutube',
+      stack: 'ReactJs + YoutubeApi + GoogleApi + Semantic UI',
+    },
+  ];
+
+  const frontEndData = ['React','Typescript','Javascript', 'Npm/Yarn', 'Redux', 'HTML', 'CSS', 'Semantic UI/Material UI/Antdesign'];
+  const backEndData = ['NodeJs', 'ExpressJs','Rest Web Services', 'Microservices','Docker', 'Insomnia/Postgres'];
+  const dataBaseData = ['PostgreSql', 'Firebase'];
+  const organizationData = ['Agile','Scrum', 'Jira', 'Git'];
+
   const classes = useStyles();
 
   const [dense, setDense] = React.useState(false);
@@ -88,6 +80,7 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
 
   function generatePorfolio(portfolioData) {
@@ -106,6 +99,19 @@ export default function ProfilePage(props) {
         </CardContent>
       </GridItem>
     )
+  }
+
+  function generate(list) {
+    return list.map((value) =>
+      <ListItem>
+        <ListItemIcon>
+          <FiberManualRecordIcon />
+        </ListItemIcon>
+        <ListItemText
+          primary={value}
+        />
+      </ListItem>
+    );
   }
 
   return (
@@ -152,7 +158,7 @@ export default function ProfilePage(props) {
                       tabIcon: Code,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem xs={2} sm={2} md={3}>
+                          <GridItem xs={24} sm={24} md={3}>
                               <Typography variant="h9" className={classes.title}>
                                 FrontEnd
                               </Typography>
@@ -160,7 +166,7 @@ export default function ProfilePage(props) {
                                 {generate(frontEndData)}
                               </List>
                           </GridItem>
-                          <GridItem xs={2} sm={2} md={3}>
+                          <GridItem xs={24} sm={24} md={3}>
                               <Typography variant="h9" className={classes.title}>
                                 BackEnd
                               </Typography>
@@ -168,7 +174,7 @@ export default function ProfilePage(props) {
                                 {generate(backEndData)}
                               </List>
                           </GridItem>
-                          <GridItem xs={2} sm={2} md={3}>
+                          <GridItem xs={24} sm={24} md={3}>
                               <Typography variant="h9" className={classes.title}>
                                 DataBase
                               </Typography>
@@ -176,7 +182,7 @@ export default function ProfilePage(props) {
                                 {generate(dataBaseData)}
                               </List>
                           </GridItem>
-                          <GridItem xs={2} sm={2} md={3}>
+                          <GridItem xs={24} sm={24} md={3}>
                               <Typography variant="h9" className={classes.title}>
                                 Organization
                               </Typography>
